@@ -1,0 +1,14 @@
+<div style="margin:3% ;padding: 2%; background-color: white;border-radius: 15px;">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile style="background-color:white" *ngFor="let item of indexMenu">
+            <div>
+                <div style="display: flex;justify-content:center;">
+                    <img width="40" [src]="item.icon">
+                </div>
+                <div style="font-size:17px;font-weight:500;margin-top:5px">
+                    {{item.name}}
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

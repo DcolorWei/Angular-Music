@@ -1,0 +1,41 @@
+.header {
+    height: 55px;
+    background-color: #1976D2;
+}
+
+.header .sideBtn {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.main{
+
+}
+
+.player{
+    
+}
+
+#layer {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    top: 55px;
+    left: 0px;
+    transition: all .7s;
+}
+
+#layer #side {
+    position: relative;
+    background-color: rgba(255, 255, 255);
+    z-index: 11;
+    width: 200px;
+    height: 100%;
+    left: -200px;
+    transition: all .7s;
+}
