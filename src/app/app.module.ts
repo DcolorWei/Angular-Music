@@ -9,7 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { SidemenuComponent } from './sidemenu/sidemenu.component'
 import { MatGridListModule } from '@angular/material/grid-list';
-import { PlayerComponent } from './player/player.component'
+import { MatListModule } from '@angular/material/list'
+import { MatDividerModule } from '@angular/material/divider'
+
+import { PlayerComponent } from './player/player.component';
+import { SearchComponent } from './search/search.component';
+import { SonglistComponent } from './view/songlist/songlist.component'
 
 @NgModule({
   declarations: [
@@ -17,14 +22,17 @@ import { PlayerComponent } from './player/player.component'
     IndexComponent,
     SidemenuComponent,
     PlayerComponent,
-
+    SearchComponent,
+    SonglistComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

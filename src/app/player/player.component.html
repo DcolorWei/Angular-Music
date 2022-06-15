@@ -1,1 +1,17 @@
-<p>player works!</p>
+<div style="height:100% ;">
+    <audio id="audio" [src]="songList[songIndex].src"></audio>
+    <div class="progress" style="display: flex;flex-direction: column; align-items:center;margin:2% 0">
+        <p>{{songList[songIndex].author}} - {{songList[songIndex].name}}</p>
+        <div class="progressbar" style="height:3px; width:70%;background-color: #A9A9A9;">
+            <div class="progressbar-current" [style.width]="currentPrecentage+'%'"
+                style="margin-top: -0.1px;height:3px; background-color: #4698EE;">
+
+            </div>
+        </div>
+    </div>
+    <div class="control" style="height: 40%; display: flex;justify-content: center;">
+        <img width="38" height="38" src="../../assets/icon/previous.png" alt="" (click)="changeSong(false)">
+        <img id="playBtn" width="38" height="38" [src]="playBtnSrc" alt="" (click)="changePlayerStatus()">
+        <img width="38" height="38" src="../../assets/icon/next.png" alt="" (click)="changeSong(true)">
+    </div>
+</div>

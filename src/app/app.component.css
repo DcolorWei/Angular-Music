@@ -1,4 +1,8 @@
 .header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
     height: 55px;
     background-color: #1976D2;
 }
@@ -11,12 +15,18 @@
     margin: 0 20px;
 }
 
-.main{
-
+.main {
+    margin-top: 60px;
+    height: auto;
 }
 
-.player{
-    
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: white;
 }
 
 #layer {
