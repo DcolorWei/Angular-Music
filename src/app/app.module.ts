@@ -12,6 +12,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list'
 import { MatDividerModule } from '@angular/material/divider'
 
+import { PlaylistService } from "./playlist.service"
+
 import { PlayerComponent } from './player/player.component';
 import { SearchComponent } from './search/search.component';
 import { SonglistComponent } from './view/songlist/songlist.component'
@@ -34,7 +36,7 @@ import { SonglistComponent } from './view/songlist/songlist.component'
     MatListModule,
     MatDividerModule
   ],
-  providers: [],
+  providers: [PlaylistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

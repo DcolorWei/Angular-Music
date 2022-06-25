@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PlaylistService } from '../playlist.service'
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.css']
 })
 export class SidemenuComponent implements OnInit {
-
-  constructor() { }
-
+  playList: Array<{ name: string, author: string, src: string }> = [];
+  deleteSongFromList = this.playlistService.deleteSongFromList;
+  constructor(private playlistService: PlaylistService) { }
   ngOnInit(): void {
+    this.playList = this.playlistService.playList;
   }
-
 }

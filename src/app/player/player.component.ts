@@ -1,33 +1,17 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { PlaylistService } from "../playlist.service"
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
-  styleUrls: ['./player.component.css']
+  styleUrls: ['./player.component.css'],
 })
 
 export class PlayerComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  constructor(private playlistService: PlaylistService) { }
   playStatus: boolean = false;
 
-  songList = [
-    {
-      name: "神的随波逐流",
-      author: "初音未来",
-      src: "../../assets/神的随波逐流.mp3"
-    },
-    {
-      name: "【34只】2018～朝你靠近～",
-      author: "",
-      src: "../../assets/【34只】2018～朝你靠近～.mp3"
-    },
-    {
-      name: "真结局（变调）",
-      author: "宅男的人间冒险",
-      src: "../../assets/宅男的人间冒险 - 真结局（变调）.mp3"
-    }
-  ]
+  songList = this.playlistService.playList;
 
   songIndex: number = 0;
 
@@ -84,10 +68,8 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes)
-    console.log('bbb')
   }
   ngOnInit(): void {
-    console.log('aaa')
     this.addProcessListener();
   }
 
