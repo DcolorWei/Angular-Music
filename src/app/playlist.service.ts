@@ -22,12 +22,19 @@ export class PlaylistService {
       src: "../../assets/宅男的人间冒险 - 真结局（变调）.mp3"
     },
     {
-      name:"メイデー、メイビーネイビー",
-      author:"そらこ",
-      src:"../../assets/メイデー、メイビーネイビー.mp3"
+      name: "メイデー、メイビーネイビー",
+      author: "そらこ",
+      src: "../../assets/メイデー、メイビーネイビー.mp3"
     }
   ];
 
+  deleteSongFromList(src: string) {
+    if (this.playList.length > 1) {
+      this.playList.splice(this.playList.findIndex((item) => item.src == src), 1);
+    }else{
+      alert('播放列表不能为空')
+    }
+  }
 
 
   constructor() { }

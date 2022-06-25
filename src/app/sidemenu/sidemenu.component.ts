@@ -7,8 +7,8 @@ import { PlaylistService } from '../playlist.service'
   styleUrls: ['./sidemenu.component.css']
 })
 export class SidemenuComponent implements OnInit {
-
   playList: Array<{ name: string, author: string, src: string }> = [];
+  deleteSongFromList = this.playlistService.deleteSongFromList;
   constructor(private playlistService: PlaylistService) { }
   ngOnInit(): void {
     this.playList = this.playlistService.playList;

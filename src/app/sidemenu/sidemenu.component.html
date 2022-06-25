@@ -2,8 +2,8 @@
     <div class="playListItem" *ngFor="let item of playList">
         <div>
         {{item.name}}</div>
-        <div>
-            <img width="20" src="../../assets/icon/CloseDefault.png">
+        <div style="margin-left: 10px;">
+            <img (click)="deleteSongFromList(item.src)" width="20" src="../../assets/icon/CloseDefault.png">
         </div>
     </div>
 </div>

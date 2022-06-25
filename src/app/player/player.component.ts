@@ -68,10 +68,8 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes)
-    console.log('bbb')
   }
   ngOnInit(): void {
-    console.log('aaa')
     this.addProcessListener();
   }
 
